@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.sjsu.yelpSearch"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="15" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true" />
+
+    <application
+        android:allowBackup="true"
+        android:debuggable="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.D1" >
+        <uses-library android:name="com.google.android.maps" />
+        <activity
+            android:name=".HomeActivity"
+            android:label="@string/app_name" 
+            android:configChanges="keyboardHidden|orientation">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SearchActivity"
+            android:label="@string/app_name" >
+
+            <!--
+         <intent-filter>
+             <action android:name="android.intent.action.MAIN" />
+             <category android:name="android.intent.category.LAUNCHER" />
+         </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name=".F1Activity"
+            android:label="@string/title_feature1"
+            android:theme="@style/Theme.D1" />
+        <activity
+            android:name=".AboutActivity"
+            android:label="@string/title_about"
+            android:theme="@style/Theme.D1" />
+        <activity android:name="com.sjsu.yelpSearch.BusinessesActivity" />
+        
+        <activity android:name=".DirectionsExample"
+                  android:label="@string/app_name"
+                  android:theme="@style/Theme.D1" />
+        <activity
+            android:name="com.sjsu.yelpSearch.BusinessActivity"
+            android:theme="@android:style/Theme.NoTitleBar" />
+    </application>
+
+</manifest>

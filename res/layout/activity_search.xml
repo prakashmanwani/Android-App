@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical" >
+
+    <LinearLayout style="@style/TitleBar" >
+
+        <ImageButton
+            style="@style/TitleBarAction"
+            android:contentDescription="@string/description_home"
+            android:onClick="onClickHome"
+            android:src="@drawable/title_home" />
+
+        <ImageView style="@style/TitleBarSeparator" />
+
+        <TextView style="@style/TitleBarText" />
+
+        <ImageButton
+            style="@style/TitleBarAction"
+            android:contentDescription="@string/description_about"
+            android:onClick="onClickAbout"
+            android:src="@drawable/title_about" />
+
+        <ImageButton
+            style="@style/TitleBarAction"
+            android:contentDescription="@string/description_search"
+            android:onClick="onClickSearch"
+            android:src="@drawable/title_search" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="104dp"
+        android:layout_height="33dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="200dp"
+        android:text="@string/search_intro"
+        android:textColor="#ffbb33"
+        android:textSize="26sp"
+        android:textStyle="normal" />
+
+    <!--
+         RadioButton
+        android:id="@+id/radio_right1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:textColor="#f00"/>
+    -->
+    <!-- android:text="@string/rad_option1" -->
+
+    <EditText
+        android:id="@+id/searchTerm"
+        android:layout_width="262dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Eg: Tacos"
+        android:imeOptions="actionNext"
+        android:maxLines="1" />
+
+    <Button
+        android:id="@+id/btSpeak"
+        android:layout_width="114dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:onClick="speak"
+        android:text="@string/btSpeak" />
+
+    <Button
+        android:id="@+id/searchButton"
+        android:layout_width="114dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:onClick="search"
+        android:text="Search" />
+    />
+
+</LinearLayout>

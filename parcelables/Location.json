@@ -1,0 +1,30 @@
+{
+    "do_json": true,
+    "package": "com.sjsu.yelpSearch",
+    "json_blacklist": [
+        "latitude",
+        "longitude"
+    ],
+    "default_values": {
+      "geoAccuracy": -1
+    },
+    "props": {
+        "double": [
+            "latitude",
+            "longitude",
+            "geoAccuracy"
+        ],
+        "List<String>": [
+            "address",
+            "displayAddress",
+            "neighborhoods"
+        ],
+        "String": [
+            "city",
+            "stateCode",
+            "postalCode",
+            "countryCode",
+            "crossStreets"
+        ]
+    }
+}
